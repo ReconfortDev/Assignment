@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: papayawhip;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-items: start;
+}
+
+form {
+    background-color: aliceblue;
+    width: 30%;
+    height: 100vh;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: start;
+    gap:10px;
+}
+
+form label{
+    width: 100%;
+    font-size: 1.2em;
+}
+
+form input,textarea{
+    width: 100%;
+    padding: 10px;
+}
+
+form input[type="submit"]{
+    background-color: dodgerblue;
+    color: papayawhip;
+    border: none;
+    outline: none;
+    padding: 15px;
+}
+
+.listsContainer{
+    background-color: papayawhip;
+    width: 70%;
+    min-height: 100vh;
+    padding: 3%;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rebeccapurple;
+}
