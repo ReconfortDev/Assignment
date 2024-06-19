@@ -2,20 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Todo List Assigment</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <form id="todoForm">
     <label for="title">Title</label>
-    <input type="text" placeholder="Enter todo ..." id="title" required/>
+    <input type="text" id="title" placeholder="Title ..." required>
     <label for="description">Description</label>
-    <textarea name="description" id="description" cols="30" rows="10"></textarea>
-    <input type="submit" value="Add Todo">
+    <input type="text" id="description" placeholder="Description ..." required>
+    <label for="date">Date</label>
+    <input type="date" id="date" required>
+    <input type="hidden" id="index">
+    <button type="submit">Add Todo</button>
 </form>
 <div class="listsContainer">
     <h2>Todos</h2>
-    <ul id="todos"></ul>
+    <div class="sort">
+        <button>Sort ASC</button>
+        <button>Sort DESC</button>
+    </div>
+    <ul id="todos">
+        <li>
+            <div id="head">
+                <span>
+                <input type="checkbox">
+                <h3>Title 1</h3>
+                </span>
+                <span>
+                Date
+                </span>
+            </div>
+            <br>
+            <span>
+            <p>Lorem ipsum</p>
+                <span>
+                <button id="editTodo">edit</button>
+                <button id="deleteTodo">delete</button>
+                </span>
+            </span>
+
+        </li>
+    </ul>
 </div>
 
 

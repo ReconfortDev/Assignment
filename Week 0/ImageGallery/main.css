@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: snow;
+    align-items: center;
+    justify-content: center;
+}
+
+#slideContainer{
+    width: 60vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+}
+
+#slideContainer .singleCard{
+    width: 100%;
+    transition: ease-in-out 0.2s;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+}
+
+#slideContainer .singleCard:hover{
+    background-color: papayawhip;
+}
+
+#slideContainer .singleCard img{
+    width: 100%;
+}
+
+#slideContainer .singleCard .details{
+    position: absolute;
+    padding: 10px;
+}
+
+#slideContainer .singleCard .details h1{
+    font-size: 3rem;
+}
+
+
+/*Modal*/
+#modal{
+    background-color: aliceblue;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+}
+.modalCard{
+    width: 60%;
+    display: flex;
+    align-items: end;
+}
+
+.modalCard img{
+    width: 100%;
+}
+.modalCard .details{
+    position: absolute;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.modalCard .details h1{
+    font-size: 3rem;
+}
+#prev {
+    background-color: dodgerblue;
+    color: aliceblue;
+    padding: 10px;
+    border: none;
+}
+#next {
+    background-color: darkcyan;
+    color: aliceblue;
+    padding: 10px;
+    border: none;
+}
+
+#closeModal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    padding: 20px;
+    outline: none;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}

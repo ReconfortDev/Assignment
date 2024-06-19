@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div id="slideContainer"></div>
 
+<div id="modal" class="hidden">
+    <div class="modalCard">
+        <img src="https://images.unsplash.com/photo-1603697237145-4a77a9ce810f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" id="modalImage"  alt="Image 1" />
+        <div class="details">
+            <h1 id="modalTitle">Title</h1>
+            <p id="modalDescription">Description</p>
+            <span>
+                <button id="prev">Prev</button>
+                <button id="next">Next</button>
+            </span>
+        </div>
+    </div>
+    <button id="closeModal">close</button>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

@@ -35,12 +35,13 @@ form input,textarea{
     padding: 10px;
 }
 
-form input[type="submit"]{
+form button{
     background-color: dodgerblue;
     color: papayawhip;
     border: none;
     outline: none;
     padding: 15px;
+    width: 100%;
 }
 
 .listsContainer{
@@ -50,7 +51,61 @@ form input[type="submit"]{
     padding: 3%;
 }
 
+.listsContainer .sort {
+
+}
+
+.listsContainer .sort button{
+    padding: 10px;
+}
+
 .completed {
     text-decoration: line-through;
     color: rebeccapurple;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+    list-style: none;
+}
+
+ul li {
+    background-color: aliceblue;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ul li #head{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+ul li #head span{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+ul li span{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+ul li span span{
+    display: flex;
+    gap: 3px;
+}
+
+ul li span span button{
+    padding: 10px;
 }
