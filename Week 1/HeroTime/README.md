@@ -1,3 +1,7 @@
 # Time Clock Challenge
 
-https://amaliheroes.netlify.app/
+https://amaliclock.netlify.app/
+
+# Time Alarm Challenge
+
+https://amalialarm.netlify.app
