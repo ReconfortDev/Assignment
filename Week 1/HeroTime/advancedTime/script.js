@@ -1,25 +1,25 @@
     let alarmTime = null;
 
     function Clock() {
-    const now = new Date();
-    this.hours = now.getHours();
-    this.minutes = now.getMinutes();
-    this.seconds = now.getSeconds();
-}
+        const now = new Date();
+        this.hours = now.getHours();
+        this.minutes = now.getMinutes();
+        this.seconds = now.getSeconds();
+    }
 
     Clock.prototype.getFormattedTime = function() {
-    const hours = String(this.hours).padStart(2, '0');
-    const minutes = String(this.minutes).padStart(2, '0');
-    const seconds = String(this.seconds).padStart(2, '0');
-    return `${hours}:${minutes}:${seconds}`;
-};
+        const hours = String(this.hours).padStart(2, '0');
+        const minutes = String(this.minutes).padStart(2, '0');
+        const seconds = String(this.seconds).padStart(2, '0');
+        return `${hours}:${minutes}:${seconds}`;
+    };
 
     function displayClock() {
     const clock = new Clock();
     document.getElementById('clock').innerText = clock.getFormattedTime();
 
     if (alarmTime && clock.getFormattedTime() === alarmTime) {
-    alert("Alarm!");
+    alert("Time up");
     alarmTime = null;
 }
 }

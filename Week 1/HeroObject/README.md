@@ -1,2 +1,3 @@
-# Advice generator App
-https://amadvise.netlify.app
+# Hero Object Challenge
+
+https://amaliheroes.netlify.app/

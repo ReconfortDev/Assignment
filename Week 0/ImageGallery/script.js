@@ -1,4 +1,4 @@
-// script.js
+// basics.js
 
 document.addEventListener('DOMContentLoaded', function() {
     const Images = [
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modalImage.src = image;
         modalTitle.textContent = title;
         modalDescription.textContent = description;
-        modal.style.visibility = 'visible';
+        modal.style.visibiliindexty = 'visible';
         modal.style.opacity = '1';
     }
 

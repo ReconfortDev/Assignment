@@ -25,10 +25,11 @@ const heroesAndVillains = [
     { name: "Joker", secretIdentity: "Unknown", powers: ["insanity", "unpredictability"], weaknesses: ["mortality"] }
 ];
 
-// Populate hero and villain dropdowns
+const heroSelect = document.getElementById('heroSelect');
+const villainSelect = document.getElementById('villainSelect');
+
+// Populate hero and villain options
 function populateSelects() {
-    const heroSelect = document.getElementById('heroSelect');
-    const villainSelect = document.getElementById('villainSelect');
 
     heroesAndVillains.forEach((character, index) => {
         const option = document.createElement('option');
@@ -44,15 +45,13 @@ function populateSelects() {
 
 // Battle logic
 function startBattle() {
-    const heroSelect = document.getElementById('heroSelect');
-    const villainSelect = document.getElementById('villainSelect');
     const resultDiv = document.getElementById('result');
 
     const hero = heroesAndVillains[heroSelect.value];
     const villain = heroesAndVillains[villainSelect.value];
 
-    const heroPower = hero.usePower(0); // Simplified: use first power
-    const villainPower = villain.powers[0]; // Simplified: use first power
+    const heroPower = hero.usePower(0); //  use first power
+    const villainPower = villain.powers[0]; //  use first power
 
     let result = `<p>${hero.name} uses ${heroPower}!</p>`;
     result += `<p>${villain.name} uses ${villainPower}!</p>`;
