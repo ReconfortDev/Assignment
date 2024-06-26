@@ -93,6 +93,12 @@ body {
             font-size: 32px;
           }
         }
+
+        input{
+          accent-color:$green;
+          outline: none;
+          border: none;
+        }
       }
 
       .checkers {
@@ -106,6 +112,30 @@ body {
           align-items: center;
            gap: 24px;
           color: $light;
+
+          .checked{
+            background-color:$green;
+            border: none;
+          }
+
+          div{
+            background-color: $dark;
+            border: 2px solid $light;
+            border-radius: 0;
+            outline: none;
+            width: 20px;
+            height: 20px;
+            @include centering;
+
+            img{
+              width: 11px;
+              height: 10px;
+            }
+          }
+
+          p{
+
+          }
         }
       }
 

@@ -73,6 +73,11 @@ body .wrapper .pwdConfigure .customizePwd .head h2 {
   color: #A4FFAF;
   font-size: 32px;
 }
+body .wrapper .pwdConfigure .customizePwd input {
+  accent-color: #A4FFAF;
+  outline: none;
+  border: none;
+}
 body .wrapper .pwdConfigure .checkers {
   display: flex;
   flex-direction: column;
@@ -84,6 +89,26 @@ body .wrapper .pwdConfigure .checkers .checker {
   align-items: center;
   gap: 24px;
   color: #E6E5EA;
+}
+body .wrapper .pwdConfigure .checkers .checker .checked {
+  background-color: #A4FFAF;
+  border: none;
+}
+body .wrapper .pwdConfigure .checkers .checker div {
+  background-color: #18171F;
+  border: 2px solid #E6E5EA;
+  border-radius: 0;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .wrapper .pwdConfigure .checkers .checker div img {
+  width: 11px;
+  height: 10px;
 }
 body .wrapper .pwdConfigure .trackerContainer {
   width: 100%;
