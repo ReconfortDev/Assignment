@@ -17,7 +17,7 @@
 
 
 
-// Create Superhero constructor function to streamline the creation of multiple superheroes.
+// Create Superhero constructor function to hold multiple superheroes.
 function Superhero2(name, secretIdentity, powers, weaknesses) {
     this.name = name;
     this.secretIdentity = secretIdentity;

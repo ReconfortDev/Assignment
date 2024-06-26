@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+<body>
+<div class="wrapper">
+  <h1>Password Generator</h1>
+
+  <div class="pwdHolder">
+    <p class="password">P4$5W0rD!</p>
+    <span>
+      <img src="assets/images/icon-copy.svg" alt="icon-copy"/>
+    </span>
+  </div>
+
+  <div class="pwdConfigure">
+    <div class="customizePwd">
+      <div class="head">
+        <p>Character Length</p>
+        <h2>10</h2>
+      </div>
+    </div>
+
+    <div class="checkers">
+      <div class="checker">
+        <label hidden="" for="upperCase">upperCase</label>
+        <input type="checkbox" value="upperCase" id="upperCase">
+        <p>Include Uppercase Letters</p>
+      </div>
+      <div class="checker">
+        <label hidden="" for="lowerCase">lowerCase</label>
+        <input type="checkbox" value="lowerCase" id="lowerCase">
+        <p>Include Lowercase Letters</p>
+      </div>
+      <div class="checker">
+        <label hidden="" for="figures">Figures</label>
+        <input type="checkbox" value="figures" id="figures">
+        <p>Include Numbers</p>
+      </div>
+      <div class="checker">
+        <label hidden="" for="symbols">Symbols</label>
+        <input type="checkbox" value="symbols" id="symbols">
+        <p>Include Symbols</p>
+      </div>
+    </div>
+
+    <div class="trackerContainer">
+      <p>Strength</p>
+      <div class="trackerSimulator">
+        <p>Medium</p>
+        <div class="levels">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <button>
+      Generate
+      <img src="assets/images/icon-arrow-right.svg" alt="icon-right"/>
+    </button>
+  </div>
+</div>
+</body>
+</html>
