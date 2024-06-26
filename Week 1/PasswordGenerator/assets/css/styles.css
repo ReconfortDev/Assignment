@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains Mono", Arial, sans-serif;
+  background-color: #18171F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+body .wrapper {
+  width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+}
+body .wrapper h1 {
+  text-align: center;
+  color: #817D92;
+}
+body .wrapper .pwdHolder {
+  background-color: #24232C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 25px;
+}
+body .wrapper .pwdHolder p {
+  color: #E6E5EA;
+  font-size: 32px;
+  font-weight: bold;
+}
+body .wrapper .pwdConfigure {
+  background-color: #24232C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 32px;
+  padding: 25px;
+}
+body .wrapper .pwdConfigure .customizePwd {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  width: 100%;
+}
+body .wrapper .pwdConfigure .customizePwd .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .wrapper .pwdConfigure .customizePwd .head p {
+  color: #E6E5EA;
+}
+body .wrapper .pwdConfigure .customizePwd .head h2 {
+  color: #A4FFAF;
+  font-size: 32px;
+}
+body .wrapper .pwdConfigure .checkers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+body .wrapper .pwdConfigure .checkers .checker {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #E6E5EA;
+}
+body .wrapper .pwdConfigure .trackerContainer {
+  width: 100%;
+  background-color: #18171F;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  color: #817D92;
+}
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator {
+  color: #E6E5EA;
+  text-transform: uppercase;
+  display: flex;
+  gap: 16px;
+}
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels {
+  display: flex;
+  gap: 8px;
+}
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels span {
+  width: 10px;
+  height: 28px;
+  background-color: #E6E5EA;
+}
+body .wrapper .pwdConfigure button {
+  width: 100%;
+  padding: 13px 16px;
+  color: #18171F;
+  background-color: #A4FFAF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row;
+}
+
+/*# sourceMappingURL=styles.css.map */
