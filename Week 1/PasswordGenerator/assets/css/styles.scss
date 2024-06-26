@@ -64,6 +64,27 @@ body {
         font-size: 32px;
         font-weight: bold;
       }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap:4px;
+
+        img{
+          color: $green;
+          transition: ease-in-out 0.2s;
+          cursor: pointer;
+
+          &:hover {
+            filter: brightness(2);
+            transform: scale(1.2);
+          }
+
+          &:active {
+            transform: scale(0.9);
+          }
+        }
+      }
     }
 
     .pwdConfigure{
@@ -104,14 +125,24 @@ body {
       .checkers {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         width: 100%;
 
         .checker {
           display: flex;
           align-items: center;
-           gap: 24px;
+          gap: 24px;
           color: $light;
+          transition: ease-in-out 0.1s;
+          padding: 5px;
+
+          .check{
+            transition: ease-in-out 0.1s;
+
+            &:active {
+              transform: scale(0.5);
+            }
+          }
 
           .checked{
             background-color:$green;
@@ -162,6 +193,10 @@ body {
               height: 28px;
               background-color: $light;
             }
+
+            .active{
+              background-color: $green;
+            }
           }
         }
 
@@ -175,8 +210,34 @@ body {
         @include centering;
         gap: 12px;
         flex-direction: row;
+        transition: ease-in-out 0.1s;
+        border: 2px solid $green;
 
+        &:hover {
+          background-color: $darkGray;
+          color: $light;
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
       }
     }
   }
+}
+
+.strong {
+  background-color: $green;
+}
+
+.medium {
+  background-color: $yellow;
+}
+
+.weak {
+  background-color: $orange;
+}
+
+.veryWeak {
+  background-color: $red;
 }

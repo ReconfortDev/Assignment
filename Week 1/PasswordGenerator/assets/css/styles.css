@@ -45,6 +45,23 @@ body .wrapper .pwdHolder p {
   font-size: 32px;
   font-weight: bold;
 }
+body .wrapper .pwdHolder span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+body .wrapper .pwdHolder span img {
+  color: #A4FFAF;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+body .wrapper .pwdHolder span img:hover {
+  filter: brightness(2);
+  transform: scale(1.2);
+}
+body .wrapper .pwdHolder span img:active {
+  transform: scale(0.9);
+}
 body .wrapper .pwdConfigure {
   background-color: #24232C;
   display: flex;
@@ -81,7 +98,7 @@ body .wrapper .pwdConfigure .customizePwd input {
 body .wrapper .pwdConfigure .checkers {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
 }
 body .wrapper .pwdConfigure .checkers .checker {
@@ -89,6 +106,14 @@ body .wrapper .pwdConfigure .checkers .checker {
   align-items: center;
   gap: 24px;
   color: #E6E5EA;
+  transition: ease-in-out 0.1s;
+  padding: 5px;
+}
+body .wrapper .pwdConfigure .checkers .checker .check {
+  transition: ease-in-out 0.1s;
+}
+body .wrapper .pwdConfigure .checkers .checker .check:active {
+  transform: scale(0.5);
 }
 body .wrapper .pwdConfigure .checkers .checker .checked {
   background-color: #A4FFAF;
@@ -133,6 +158,9 @@ body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels span {
   height: 28px;
   background-color: #E6E5EA;
 }
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels .active {
+  background-color: #A4FFAF;
+}
 body .wrapper .pwdConfigure button {
   width: 100%;
   padding: 13px 16px;
@@ -144,6 +172,31 @@ body .wrapper .pwdConfigure button {
   align-items: center;
   gap: 12px;
   flex-direction: row;
+  transition: ease-in-out 0.1s;
+  border: 2px solid #A4FFAF;
+}
+body .wrapper .pwdConfigure button:hover {
+  background-color: #24232C;
+  color: #E6E5EA;
+}
+body .wrapper .pwdConfigure button:active {
+  transform: scale(0.9);
+}
+
+.strong {
+  background-color: #A4FFAF;
+}
+
+.medium {
+  background-color: #F8CD65;
+}
+
+.weak {
+  background-color: #FB7C58;
+}
+
+.veryWeak {
+  background-color: #F64A4A;
 }
 
 /*# sourceMappingURL=styles.css.map */

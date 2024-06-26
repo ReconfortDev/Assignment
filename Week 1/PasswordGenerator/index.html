@@ -15,8 +15,8 @@
   <h1>Password Generator</h1>
 
   <div class="pwdHolder">
-    <p class="password">P4$5W0rD!</p>
-    <span>
+    <p class="password" id="passwordDisplay">P4$5W0rD!</p>
+    <span id="copyButton">
       <img src="assets/images/icon-copy.svg" alt="icon-copy"/>
     </span>
   </div>
@@ -25,34 +25,34 @@
     <div class="customizePwd">
       <div class="head">
         <p>Character Length</p>
-        <h2>10</h2>
+        <h2 id="lengthValue">6</h2>
       </div>
 
       <label hidden="" for="range"></label>
-      <input type="range" id="range" name="vol" min="0" max="50">
+      <input type="range" id="range" name="vol" min="0" max="12" value="6">
     </div>
 
     <div class="checkers">
       <div class="checker">
-        <div class="checked">
+        <div class="check checked" id="includeUppercase">
           <img src="assets/images/icon-check.svg" alt="icon-check">
         </div>
         <p>Include Uppercase Letters</p>
       </div>
       <div class="checker">
-        <div>
+        <div class="check" id="includeLowercase">
           <img src="assets/images/icon-check.svg" alt="icon-check">
         </div>
         <p>Include Lowercase Letters</p>
       </div>
       <div class="checker">
-        <div>
+        <div class="check" id="includeNumbers">
           <img src="assets/images/icon-check.svg" alt="icon-check">
         </div>
         <p>Include Numbers</p>
       </div>
       <div class="checker">
-        <div>
+        <div class="check" id="includeSymbols">
           <img src="assets/images/icon-check.svg" alt="icon-check">
         </div>
         <p>Include Symbols</p>
@@ -62,7 +62,7 @@
     <div class="trackerContainer">
       <p>Strength</p>
       <div class="trackerSimulator">
-        <p>Medium</p>
+        <p id="strengthLabel">Medium</p>
         <div class="levels">
           <span></span>
           <span></span>
@@ -72,11 +72,13 @@
       </div>
     </div>
 
-    <button>
+    <button id="generateBtn">
       Generate
       <img src="assets/images/icon-arrow-right.svg" alt="icon-right"/>
     </button>
   </div>
 </div>
+
+<script src="assets/scripts/scripts.js"></script>
 </body>
 </html>
