@@ -41,7 +41,7 @@ class PasswordGenerator {
         copyButton.addEventListener('click', () => {
             const password = pwdDisplay.textContent;
             navigator.clipboard.writeText(password);
-            alert("Copied!");
+            // alert("Copied!");
         });
 
         this.generateAndUpdatePassword();
@@ -86,20 +86,14 @@ class PasswordGenerator {
 
     updateStrength(password) {
         let strength = 0;
-        const lengthCriteria = password.length >= 12;
-        const uppercaseCriteria = /[A-Z]/.test(password);
-        const lowercaseCriteria = /[a-z]/.test(password);
-        const numberCriteria = /\d/.test(password);
-        const symbolCriteria = /[^A-Za-z0-9]/.test(password);
 
-        if (lengthCriteria) strength++;
-        if (uppercaseCriteria) strength++;
-        if (lowercaseCriteria) strength++;
-        if (numberCriteria) strength++;
-        if (symbolCriteria) strength++;
+        if (password.length >= 12) strength++;
+        if (/[A-Z]/.test(password)) strength++;
+        if (/[a-z]/.test(password)) strength++;
+        if (/\d/.test(password)) strength++;
+        if (/[^A-Za-z0-9]/.test(password)) strength++;
 
-        // Reset the class list of levels before assigning new classes
-        levels.forEach(level => level.className = '');
+        levels.forEach(level => level.className = ''); // Reset all classes
 
         if (strength >= 5) {
             strengthLabel.textContent = "Strong";
@@ -119,6 +113,7 @@ class PasswordGenerator {
             level.classList.toggle('active', index < strength);
         });
     }
+
 
 }
 

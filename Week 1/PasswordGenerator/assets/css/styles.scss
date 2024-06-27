@@ -25,6 +25,10 @@ $green: #A4FFAF;
 @mixin customText {
   font-size: 18px;
   font-weight: bold;
+
+  @media (max-width: 600px) {
+    font-size: 15px;
+  }
 }
 
 *{
@@ -46,9 +50,21 @@ body {
     @include centering;
     gap: 31px;
 
+    @media (max-width: 600px) {
+      width: 90vw;
+      justify-content: start;
+       padding-top: 20px;
+    }
+
     h1{
       text-align: center;
       color: $lightGray;
+      font-size: 32px;
+      font-weight: bold;
+
+      @media (max-width: 600px) {
+        font-size: 24px;
+      }
     }
 
     .pwdHolder{
@@ -63,6 +79,10 @@ body {
         color: $light;
         font-size: 32px;
         font-weight: bold;
+
+        @media (max-width: 600px) {
+          font-size: 24px;
+        }
       }
 
       span {
@@ -72,16 +92,15 @@ body {
 
         img{
           color: $green;
-          transition: ease-in-out 0.2s;
+          transition: ease-in-out 0.1s;
           cursor: pointer;
 
           &:hover {
             filter: brightness(2);
-            transform: scale(1.2);
           }
 
           &:active {
-            transform: scale(0.9);
+            transform: scale(0.5);
           }
         }
       }
@@ -112,6 +131,10 @@ body {
           h2{
             color: $green;
             font-size: 32px;
+
+            @media (max-width: 600px) {
+              font-size: 24px;
+            }
           }
         }
 
@@ -194,8 +217,29 @@ body {
               background-color: $light;
             }
 
-            .active{
+            .strong {
               background-color: $green;
+              border: 1px solid $green;
+            }
+
+            .medium {
+              background-color: $yellow;
+              border: 1px solid $yellow;
+            }
+
+            .weak {
+              background-color: $orange;
+              border: 1px solid $orange;
+            }
+
+            .tooWeak {
+              background-color: $red;
+              border: 1px solid $red;
+            }
+
+            .active{
+              background-color: transparent;
+              border: 1px solid $light;
             }
           }
         }
@@ -208,6 +252,7 @@ body {
         color: $dark;
         background-color: $green;
         @include centering;
+        @include customText;
         gap: 12px;
         flex-direction: row;
         transition: ease-in-out 0.1s;
@@ -216,6 +261,10 @@ body {
         &:hover {
           background-color: $darkGray;
           color: $light;
+
+          img {
+            filter: brightness(10);
+          }
         }
 
         &:active {

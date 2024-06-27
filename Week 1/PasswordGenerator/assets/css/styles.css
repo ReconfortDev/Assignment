@@ -20,6 +20,11 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 }
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+}
 body .wrapper {
   width: 540px;
   display: flex;
@@ -28,9 +33,23 @@ body .wrapper {
   align-items: center;
   gap: 31px;
 }
+@media (max-width: 600px) {
+  body .wrapper {
+    width: 90vw;
+    justify-content: start;
+    padding-top: 20px;
+  }
+}
 body .wrapper h1 {
   text-align: center;
   color: #817D92;
+  font-size: 32px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  body .wrapper h1 {
+    font-size: 24px;
+  }
 }
 body .wrapper .pwdHolder {
   background-color: #24232C;
@@ -45,6 +64,11 @@ body .wrapper .pwdHolder p {
   font-size: 32px;
   font-weight: bold;
 }
+@media (max-width: 600px) {
+  body .wrapper .pwdHolder p {
+    font-size: 24px;
+  }
+}
 body .wrapper .pwdHolder span {
   display: flex;
   align-items: center;
@@ -52,15 +76,14 @@ body .wrapper .pwdHolder span {
 }
 body .wrapper .pwdHolder span img {
   color: #A4FFAF;
-  transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.1s;
   cursor: pointer;
 }
 body .wrapper .pwdHolder span img:hover {
   filter: brightness(2);
-  transform: scale(1.2);
 }
 body .wrapper .pwdHolder span img:active {
-  transform: scale(0.9);
+  transform: scale(0.5);
 }
 body .wrapper .pwdConfigure {
   background-color: #24232C;
@@ -89,6 +112,11 @@ body .wrapper .pwdConfigure .customizePwd .head p {
 body .wrapper .pwdConfigure .customizePwd .head h2 {
   color: #A4FFAF;
   font-size: 32px;
+}
+@media (max-width: 600px) {
+  body .wrapper .pwdConfigure .customizePwd .head h2 {
+    font-size: 24px;
+  }
 }
 body .wrapper .pwdConfigure .customizePwd input {
   accent-color: #A4FFAF;
@@ -158,8 +186,25 @@ body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels span {
   height: 28px;
   background-color: #E6E5EA;
 }
-body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels .active {
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels .strong {
   background-color: #A4FFAF;
+  border: 1px solid #A4FFAF;
+}
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels .medium {
+  background-color: #F8CD65;
+  border: 1px solid #F8CD65;
+}
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels .weak {
+  background-color: #FB7C58;
+  border: 1px solid #FB7C58;
+}
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels .tooWeak {
+  background-color: #F64A4A;
+  border: 1px solid #F64A4A;
+}
+body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels .active {
+  background-color: transparent;
+  border: 1px solid #E6E5EA;
 }
 body .wrapper .pwdConfigure button {
   width: 100%;
@@ -170,14 +215,24 @@ body .wrapper .pwdConfigure button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
+  font-weight: bold;
   gap: 12px;
   flex-direction: row;
   transition: ease-in-out 0.1s;
   border: 2px solid #A4FFAF;
 }
+@media (max-width: 600px) {
+  body .wrapper .pwdConfigure button {
+    font-size: 15px;
+  }
+}
 body .wrapper .pwdConfigure button:hover {
   background-color: #24232C;
   color: #E6E5EA;
+}
+body .wrapper .pwdConfigure button:hover img {
+  filter: brightness(10);
 }
 body .wrapper .pwdConfigure button:active {
   transform: scale(0.9);
