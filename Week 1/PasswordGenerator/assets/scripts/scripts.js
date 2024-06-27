@@ -6,13 +6,14 @@ const includeNumbers = document.querySelector('#includeNumbers');
 const includeSymbols = document.querySelector('#includeSymbols');
 const generateBtn = document.querySelector('#generateBtn');
 const copyButton = document.querySelector('#copyButton');
+const copiedText = document.querySelector('#copiedText');
 const pwdDisplay = document.querySelector('#passwordDisplay');
 const strengthLabel = document.querySelector('#strengthLabel');
 const levels = document.querySelectorAll('.levels span');
 
 class PasswordGenerator {
     constructor() {
-        this.length = 10; // Default length
+        this.length = 6; // Default length
         this.includeUppercase = true;
         this.includeLowercase = false;
         this.includeNumbers = false;
@@ -41,7 +42,14 @@ class PasswordGenerator {
         copyButton.addEventListener('click', () => {
             const password = pwdDisplay.textContent;
             navigator.clipboard.writeText(password);
-            // alert("Copied!");
+            copiedText.style.opacity = '1';
+            setTimeout(() => {
+                copiedText.style.transition = '0.1s'
+                copiedText.style.transform = 'translateY(-30px)';
+                copiedText.style.opacity = '0';
+            }, 2000);
+
+            copiedText.style.transform = 'translateY(0)';
         });
 
         this.generateAndUpdatePassword();
@@ -74,13 +82,24 @@ class PasswordGenerator {
 
     generateAndUpdatePassword() {
         const password = this.generatePassword();
-        if (password !== 'Please select at least one character type') {
-            pwdDisplay.textContent = password;
+        pwdDisplay.textContent = password;
+        this.pwdExist(password);
+        if (password !== 'Select condition') {
             this.updateStrength(password);
         } else {
-            pwdDisplay.textContent = password;
+            pwdDisplay.textContent = ''
             strengthLabel.textContent = '';
             levels.forEach(level => level.classList.remove('active'));
+        }
+    }
+
+    pwdExist(password) {
+        if (password && password !== 'Select condition') {
+            pwdDisplay.classList.remove('noPwdGenerated');
+            pwdDisplay.classList.add('pwdGenerated');
+        } else {
+            pwdDisplay.classList.remove('pwdGenerated');
+            pwdDisplay.classList.add('noPwdGenerated');
         }
     }
 
@@ -97,24 +116,30 @@ class PasswordGenerator {
 
         if (strength >= 5) {
             strengthLabel.textContent = "Strong";
-            levels.forEach(level => level.classList.add('strong'));
+            levels.forEach((level, index) => {
+                level.classList.add('strong');
+                level.classList.toggle('active', index < 0);
+            });
         } else if (strength >= 4 && password.length >= 10) {
             strengthLabel.textContent = "Medium";
-            levels.forEach(level => level.classList.add('medium'));
+            levels.forEach((level, index) => {
+                level.classList.add('medium');
+                level.classList.toggle('active', index < 1);
+            });
         } else if (strength >= 3 && password.length >= 8) {
             strengthLabel.textContent = "Weak";
-            levels.forEach(level => level.classList.add('weak'));
+            levels.forEach((level, index) => {
+                level.classList.add('weak');
+                level.classList.toggle('active', index < 2);
+            });
         } else {
             strengthLabel.textContent = "Too Weak";
-            levels.forEach(level => level.classList.add('tooWeak'));
+            levels.forEach((level, index) => {
+                level.classList.add('tooWeak');
+                level.classList.toggle('active', index < 3);
+            });
         }
-
-        levels.forEach((level, index) => {
-            level.classList.toggle('active', index < strength);
-        });
     }
-
-
 }
 
 document.addEventListener('DOMContentLoaded', () => {

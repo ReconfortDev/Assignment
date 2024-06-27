@@ -76,19 +76,35 @@ body {
       padding: 15px 25px;
 
       p{
-        color: $light;
         font-size: 32px;
         font-weight: bold;
+        color: $lightGray;
 
         @media (max-width: 600px) {
           font-size: 24px;
         }
       }
 
+      .noPwdGenerated{
+
+      }
+
+      .pwdGenerated{
+        color: $light;
+      }
+
       span {
         display: flex;
         align-items: center;
         gap:4px;
+
+        #copiedText{
+          color: $green;
+          font-size: 12px;
+          transform: translateY(0);
+          transition: ease-in-out 0.1s;
+          opacity: 0;
+        }
 
         img{
           color: $green;
@@ -209,6 +225,7 @@ body {
 
           .levels{
             display: flex;
+            flex-direction: row-reverse;
             gap: 8px;
 
             span{
@@ -273,20 +290,4 @@ body {
       }
     }
   }
-}
-
-.strong {
-  background-color: $green;
-}
-
-.medium {
-  background-color: $yellow;
-}
-
-.weak {
-  background-color: $orange;
-}
-
-.veryWeak {
-  background-color: $red;
 }

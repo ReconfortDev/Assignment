@@ -60,19 +60,29 @@ body .wrapper .pwdHolder {
   padding: 15px 25px;
 }
 body .wrapper .pwdHolder p {
-  color: #E6E5EA;
   font-size: 32px;
   font-weight: bold;
+  color: #817D92;
 }
 @media (max-width: 600px) {
   body .wrapper .pwdHolder p {
     font-size: 24px;
   }
 }
+body .wrapper .pwdHolder .pwdGenerated {
+  color: #E6E5EA;
+}
 body .wrapper .pwdHolder span {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+body .wrapper .pwdHolder span #copiedText {
+  color: #A4FFAF;
+  font-size: 12px;
+  transform: translateY(0);
+  transition: ease-in-out 0.1s;
+  opacity: 0;
 }
 body .wrapper .pwdHolder span img {
   color: #A4FFAF;
@@ -179,6 +189,7 @@ body .wrapper .pwdConfigure .trackerContainer .trackerSimulator {
 }
 body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels {
   display: flex;
+  flex-direction: row-reverse;
   gap: 8px;
 }
 body .wrapper .pwdConfigure .trackerContainer .trackerSimulator .levels span {
@@ -236,22 +247,6 @@ body .wrapper .pwdConfigure button:hover img {
 }
 body .wrapper .pwdConfigure button:active {
   transform: scale(0.9);
-}
-
-.strong {
-  background-color: #A4FFAF;
-}
-
-.medium {
-  background-color: #F8CD65;
-}
-
-.weak {
-  background-color: #FB7C58;
-}
-
-.veryWeak {
-  background-color: #F64A4A;
 }
 
 /*# sourceMappingURL=styles.css.map */
