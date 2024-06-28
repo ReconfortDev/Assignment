@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {},
     colors: {
+      'transparent': 'transparent',
       'darkest': '#050505',
       'darker': '#1F1F1F',
       'dark': '#2D2D2D',
