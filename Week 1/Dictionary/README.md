@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# DICTIONARY CHALLENGE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+This challenge is assessment in React, Its Dictionary with more advanced features  light switch mode.
 
-Currently, two official plugins are available:
+[Dictionary Link](https://amalidictionary.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
+- [Introduction](#Introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
 
-## Expanding the ESLint configuration
+## Features
+- **Responsive Design:** Adapts seamlessly to different screen sizes and devices.
+- **Figma Design Accuracy:** Matches the provided Figma designs, including layout, spacing, typography, and visual styles.
+- **Hover Interaction:** Displays additional details when hovering over a photo.
+- **Cross-browser Compatibility:** Ensures consistent performance across modern web browsers (Chrome, Firefox, Safari, and Edge).
+- **Clean Code:** Follows best practices and coding conventions for HTML, CSS, and JavaScript.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
+- React JS
+- TailwindCSS
 
-- Configure the top-level `parserOptions` property like this:
+1. **Open the Project:**
+   Open the project in your preferred code editor (e.g., Visual Studio Code ).
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. **View in Browser:**
+   Open `npm run dev` in your web browser to view the interactive photo gallery.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+This README provides clear and concise information about the project, including setup instructions, usage details, and solutions to the coding challenges.
