@@ -1,4 +1,3 @@
-// Details.tsx
 import React from "react";
 
 interface DetailsProps {

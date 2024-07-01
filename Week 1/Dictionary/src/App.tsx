@@ -1,4 +1,3 @@
-// App.tsx
 import './App.css'
 import SearchBox from "./components/SearchBox.tsx";
 import Details from "./components/Details.tsx";
